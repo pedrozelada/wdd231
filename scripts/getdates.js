@@ -4,7 +4,7 @@ let last = document.querySelector("#last");
 
 const today = new Date();
 
-year.innerHTML = `© <span class="highlight">${today.getFullYear()} Pedro Rafael Zelada Soruco   Tarija </span>`;
+year.innerHTML = `© <span class="highlight">${today.getFullYear()} Pedro Rafael Zelada Soruco   Tarija-Bolivia  </span>`;
 
 let oLastModif = new Date(document.lastModified);
 

@@ -1,26 +1,30 @@
 
 body {
     font-family: Arial, sans-serif;
-    
     background-color: #f4f4f4;
 
 }
 
-h2 {
-    font-family: 'Georgia', serif;
-    color: #000080;
-    text-align: center;
-}
-
 h1 {
-    background-color: #29537f;
+    font-family: 'Georgia', serif;
+    background-color: #0c521b;
     text-align: center;
     color: #fff;
     padding: 10px;
     font-size: 25px;
     margin: auto;
-
 }
+
+h2 {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #0c521b;
+    color: #fff;
+    margin: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 .header-content {
     display: flex;
     align-items: center; 
@@ -35,11 +39,9 @@ h1 {
     box-shadow: 0 0 30px #777;
 }
 
-
-
 nav {
     margin: 0 auto;
-    background-color: #36454f;
+    background-color: #3c3f42;
     
 }
 
@@ -55,8 +57,6 @@ nav ul.open {
 	flex-direction: column;
 }
 
-
-
 nav a {
     display: block;
     color: #fff;
@@ -68,7 +68,6 @@ nav a {
 nav a:hover {
     text-decoration: underline; 
 }
-
 
 .active {
     color: yellow;
@@ -91,7 +90,6 @@ nav a:hover {
 #menu.open::before {
 	content: "X";
 }
-
 
 main {
     margin-top: 20px;
@@ -118,27 +116,18 @@ main {
 #button-container {
     display: flex;
     justify-content: center; 
+    border-bottom: 1px solid #ccc;
 }
 
 #button-container button {
     margin-top: 10px;
-    margin-right: 10px; 
-}
-
-
-h2 {
-    background-color: #29537f;
-    text-align: center;
+    margin-right: 30px; 
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10%;
+    background-color: #3c3f42;
     color: #fff;
-    margin: 0;
-    border-radius: 10px;
-    padding: 5px;
-
-}
-
-h3 {
-    text-align: center;
-    border-bottom: 1px solid #ccc
 }
 
 .container {
@@ -155,16 +144,29 @@ h3 {
     border-radius: 5%;
     padding-left: 6rem;
     padding-right: 6rem;
+}
+
+.completed {
+    background-color: rgb(212, 223, 214);
+}
+.notcompleted {
     background-color: #eee;
 }
 
-
+.credits {
+    padding: 5px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 5%;
+    text-align: center; 
+    padding: 5px;
+    margin: 0;
+}
 
 
 footer {
     margin-top: 20px; 
     text-align: center; 
-    background-color: #29537f;
+    background-color: #0c521b;
     color: #fff;
     padding: 20px;
 }
@@ -175,6 +177,16 @@ footer p {
     color: #fff;
 }
 
+.flag {
+    margin-left: 10px;
+    width: 40px;
+    height: auto;
+}
+.footer-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
 
 
 

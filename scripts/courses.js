@@ -9,7 +9,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -22,7 +22,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -34,7 +34,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -46,7 +46,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -60,7 +60,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -83,21 +83,32 @@ const coursesElement = document.querySelector('.container');
 
 
 const displayCourses = (coursesList) => {
+    let totalCredits = 0;
     coursesElement.innerHTML = "";
     const total = document.createElement('p');
+    total.classList.add('credits');
       coursesList.forEach(course => {
         const article = document.createElement('article');
         const nameP = document.createElement('p');
-
+        if (course.completed === true) {
+            article.classList.add('completed');
+        }
+        else if(course.completed === false) {
+            article.classList.add('notcompleted');
+        }
         const nameSubject = course.subject;
         const numberSubject = course.number;
+        totalCredits += course.credits;
 
         nameP.innerHTML = `${nameSubject} ${numberSubject}`;
         article.appendChild(nameP);
 
         coursesElement.appendChild(article);
 
+
       });
+      total.innerHTML = `Credits Required: ${totalCredits}`;
+      coursesElement.appendChild(total);
   
 }
 
