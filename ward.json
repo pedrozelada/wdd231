@@ -1,0 +1,25 @@
+[
+    {
+    "family_name":"Sanchez",
+    "date_moved": "07/13/2023",
+    "number_of_people": 4,
+    "visited": false,
+    "family_members": [
+    {
+      "name": "Carlos Sanchez",
+      "gender": "Male",
+      "birthdate": "02/02/2003"
+    },
+    {
+      "name": "Daniel Sanchez",
+      "gender": "Male",
+      "birthdate": "03/03/2003"
+    },
+    {
+      "name": "Luciana Sanchez",
+      "gender": "Female",
+      "birthdate": "12/21/2015"
+    }
+  ]    
+}
+]
