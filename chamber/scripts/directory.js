@@ -19,38 +19,42 @@ function showList() {
 
 
 
-const url = '/data/members.json';
-const cards = document.querySelector('.section');
+const url = 'https://pedrozelada.github.io/wdd231/chamber/data/members.json';
+const cards = document.querySelector('.grid');
 
 async function getCompaniesData(url) {
     const response = await fetch(url);
     const data = await response.json();
-     console.table(data.companies);
-  //displayProphets(data.prophets);
+    displayCompanies(data.companies);
 }
 
-const displayProphets = (prophets) => {
-    prophets.forEach(prophet => {
+const displayCompanies = (companies) => {
+    companies.forEach(companie => {
         let card = document.createElement('section');
-        let fullName = document.createElement('h2');
-        let dateBirth = document.createElement('p');
-        let placeBirht = document.createElement('p');
         let portrait = document.createElement('img');
+        let name = document.createElement('p');
+        let address = document.createElement('p');
+        let telf = document.createElement('p');
+        let website = document.createElement('p');
         
-        fullName.innerHTML = `${prophet.name} ${prophet.lastname}`;
-        dateBirth.innerHTML = `Date of Birth: ${prophet.birthdate}`;
-        placeBirht.innerHTML = `Place of Birth: ${prophet.birthplace}`;
+        name.innerHTML = `${companie.name}`;
+        address.innerHTML = `${companie.address}`;
+        telf.innerHTML = `${companie.phonenumber}`;
+        website.innerHTML = `<a href="${companie.websiteurl}" target="_blank" title="${companie.name}">${companie.websiteurl}</a>`;
 
-        portrait.setAttribute('src', prophet.imageurl);
-        portrait.setAttribute('alt', prophet.lastname);
+        portrait.setAttribute('src', companie.image);
+        portrait.setAttribute('alt', companie.name);
         portrait.setAttribute('loading', 'lazy');
         portrait.setAttribute('width', '340');
         portrait.setAttribute('height', '440');
 
-        card.appendChild(fullName);
-        card.appendChild(dateBirth);
-        card.appendChild(placeBirht);
+        name.setAttribute('class', "hidep");
+
         card.appendChild(portrait);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(telf);
+        card.appendChild(website);
         
         cards.appendChild(card);
     });
