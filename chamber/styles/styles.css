@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+
+}
+
+header {
+    background-color: #0c521b;
+    color: #fff;
+}
+
+
+header img {
+    margin-right: 10px;
+    width: 70px;
+    height: auto;
+    border-radius: 5%;
+}
+
+#headtitle {
+    margin-left: 25px;;
+    font-size: 45px; 
+}
+
+#titledescription {
+   display: flex;
+   align-items: center;
+    justify-content: center;
+  
+}
+
+
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    display: none;
+    
+}
+
+nav ul.open {
+	display: flex; 
+	flex-direction: column;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+.active {
+    color: yellow;
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #fff;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+footer {
+    padding: 15px;
+    background-color: #0c521b;
+    color: #fff;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+#icons img{
+    margin-right: 20px;
+    width: 40px;
+}
+
+
+
+@media screen and (min-width: 640px) {
+
+    header, nav, main, footer {
+        max-width: 90%;
+        margin:auto;
+    }
+    footer{
+        margin-top: 20px; 
+    }
+    nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+    #menu {
+		display: none; 
+	}
+
+    header, footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer div{
+        margin: auto;
+    }
+
+}
