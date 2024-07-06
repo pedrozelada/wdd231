@@ -23,22 +23,25 @@ header img {
 }
 
 #titledescription {
-   display: flex;
-   align-items: center;
+    margin-left: -80px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-  
+}
+
+nav  {
+    display: grid;
+    grid-template-rows: 0fr; 
+    transition: grid-template-rows 0.5s ease-out; 
 }
 
 nav ul {
-    margin: 0;
+    overflow: hidden;
     list-style-type: none;
-    display: none;
-    
 }
 
-nav ul.open {
-	display: flex; 
-	flex-direction: column;
+nav.open {
+	grid-template-rows: 1fr;
 }
 
 nav a {
@@ -47,6 +50,7 @@ nav a {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
+    
 }
 
 nav a:hover {
@@ -58,7 +62,7 @@ nav a:hover {
 }
 
 #menu {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	border: 0;
 	background: none;
 	color: #fff;
@@ -92,15 +96,18 @@ footer p {
     width: 40px;
 }
 
-
-
-
 .menu {
 	margin: 1rem auto;
-	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 0.5rem;
-	background-color: #bed;
 	text-align: center;
+}
+
+#grid, #list{
+    border-radius: 10%;
+    border: 3px solid #0c521b;
+    color: #0c521b;
+    margin-left: 20px;
+    
 }
 
 .menu button {
@@ -124,14 +131,13 @@ section {
 
 .grid section {
     width: 350px;
-    height: 250px;
+    height: 200px;
 	text-align: center; 
+    background-color: #ffffff;
+    border: 1px solid #fff;
+	box-shadow: 0 0 5px #333;
 }
 
-.grid img {
-	border: 1px solid #fff;
-	box-shadow: 0 0 10px #333;
-}
 
 .grid .hidep {
     display: none;
@@ -144,38 +150,17 @@ section {
 	margin: 0.1rem;
 }
 
-
-.list {
-	display: flex;
-	flex-direction: column;
-}
-
-.list section {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	margin: 0;
-	padding: 1rem;
-}
-
 .list section > * {
 	margin: 0 1rem;
 }
 
 .list section img {
-	display: none; /* smaller viewports only */
+	display: none; 
 }
 
-.list section h3 {
-	font-size: 1rem;
-	font-family: Roboto, Helvetica, sans-serif;
-}
 
 .list section:nth-child(even) {
-	background-color: #bed;
-}
-
-section h3 {
-	font-size: 1.5rem;
+	background-color: rgb(182, 208, 183);
 }
 
 section p {
@@ -184,7 +169,7 @@ section p {
 }
 
 section a {
-	font-family: "Roboto", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-size: 0.85rem;
 	color: navy;
 	letter-spacing: 1.1pt;
@@ -192,14 +177,23 @@ section a {
 
 .grid img {
 	height: 100px;
-	width: auto; /* Images are jerks - Seattle*/
+	width: auto; 
+}
+
+#semicircle {
+    font-size: 3rem;
+	border: 0;
+	background: none;
+	color: #fff;
+	position: absolute;
+	top: 1.5rem;
+	right: 3rem;
 }
 
 
 @media screen and (min-width: 640px) {
 
     header, nav, main, footer {
-        max-width: 90%;
         margin:auto;
     }
     footer{
@@ -221,8 +215,31 @@ section a {
         justify-content: center;
     }
 
+    #titledescription {
+        margin-left: 150px;
+    }
+    nav {
+        grid-template-rows: 1fr;
+        margin-right: 150px;
+    }
+
     footer div{
         margin: auto;
     }
+    .grid {
+        margin: 10px 100px 10px 100px;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        margin: 0;
+        padding: 1rem;
+    }
+
 
 }

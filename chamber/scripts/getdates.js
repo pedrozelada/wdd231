@@ -28,7 +28,7 @@ last.innerHTML = `Last Modification ${formattedDate}`;
 
 // For button
 const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector('#animate');
 
 hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
