@@ -22,6 +22,12 @@ header img {
     font-size: 45px; 
 }
 
+h1 {
+    font-family: "Ubuntu", sans-serif;;
+    text-align: center;
+    font-weight: normal;
+}
+
 #titledescription {
     margin-left: -80px;
     display: flex;
