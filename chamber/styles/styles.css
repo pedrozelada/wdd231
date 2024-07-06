@@ -13,7 +13,7 @@ header {
 header img {
     margin-right: 10px;
     width: 70px;
-    height: auto;
+    height: 82px;
     border-radius: 5%;
 }
 
@@ -64,7 +64,7 @@ nav a:hover {
 }
 
 .active {
-    color: yellow;
+    color: rgb(246, 246, 85);
 }
 
 #menu {
@@ -95,6 +95,14 @@ footer p {
     margin: 5px;
     font-size: 14px;
     color: #fff;
+}
+
+#icons{
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
 }
 
 #icons img{
