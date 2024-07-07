@@ -64,7 +64,7 @@ nav a:hover {
 }
 
 .active {
-    color: rgb(246, 246, 85);
+    color: rgba(244, 240, 33, 0.949);
 }
 
 #menu {
@@ -131,12 +131,6 @@ footer p {
 	font-weight: 700;
 }
 
-section {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	padding: 0.5rem;
-	background-color: #eee;
-}
-
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -146,6 +140,7 @@ section {
 }
 
 .grid section {
+    padding: 0.5rem;
     width: 350px;
     height: 200px;
 	text-align: center; 
@@ -174,7 +169,6 @@ section {
 	display: none; 
 }
 
-
 .list section:nth-child(even) {
 	background-color: rgb(182, 208, 183);
 }
@@ -188,7 +182,6 @@ section a {
 	font-family: Arial, sans-serif;
 	font-size: 0.85rem;
 	color: navy;
-	letter-spacing: 1.1pt;
 }
 
 .grid img {
@@ -212,12 +205,11 @@ section a {
     header, nav, main, footer {
         margin:auto;
     }
-    footer{
-        margin-top: 20px; 
-    }
+
     nav ul {
 		display: flex;
 	}
+
 	nav ul li {
 		flex: 1 1 100%;
 	}
@@ -234,6 +226,7 @@ section a {
     #titledescription {
         margin-left: 150px;
     }
+
     nav {
         grid-template-rows: 1fr;
         margin-right: 150px;
@@ -242,9 +235,11 @@ section a {
     footer div{
         margin: auto;
     }
+
     .grid {
         margin: 10px 100px 10px 100px;
     }
+
     .list {
         display: flex;
         flex-direction: column;
@@ -256,6 +251,4 @@ section a {
         margin: 0;
         padding: 1rem;
     }
-
-
 }
