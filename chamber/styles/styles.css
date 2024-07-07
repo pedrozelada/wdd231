@@ -123,7 +123,6 @@ footer p {
     border: 3px solid #0c521b;
     color: #0c521b;
     margin-left: 20px;
-    
 }
 
 .menu button {
@@ -157,12 +156,17 @@ footer p {
 .grid p {
     max-width: 100%;
 }
+
 .grid section > * {
 	margin: 0.1rem;
 }
 
 .list section > * {
 	margin: 0 1rem;
+}
+
+.list section {
+    padding: 10px;
 }
 
 .list section img {
