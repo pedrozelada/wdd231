@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarija Chamber of Commerce</title>
+    <meta name="description" content="Chamber of commerce of the city of Tarija">
+    <meta name="author" content="Pedro Zelada">
+    <meta property="og:title" content="Tarija Chamber of Commerce">
+    <meta property="og:description" content="Chamber of Commerce of the city of Tarija, here you will find information on local businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pedrozelada.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://pedrozelada.github.io/chamber/images/tarija.webp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@flickr">
+    <meta name="twitter:title" content="Tarija Chamber of Commerce">
+    <meta name="twitter:description" content="Chamber of Commerce of the city of Tarija, here you will find information on local businesses.">
+    <meta name="twitter:image" content="https://elpais.bo/img/images_980/contents/2024/01/19/2159baf2-0b3b-4c17-b22f-b40bdc366dfd.jpg">
+    <link rel="icon" href="tarijaicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="titledescription">
+            <img src="images/escudotarija2.webp" alt="logo tarija" width="70" height="82">
+            <p>
+            <span id="headtitle"><b>Tarija</b></span><br>
+            <span id="headown">Chamber of Commerce</span>
+            </p>
+            <button id="semicircle">◐</button>
+        </div>
+        <button id="menu"></button>
+        <nav id="animate">
+            <ul class="navigation">
+                <li><a href="index.html" title="Home Page">Home</a></li>
+                <li><a href="directory.html" title="Chamber proyect" class="active">Directory</a></li>
+                <li><a href="join.html" title="Join us">Join</a></li>
+                <li><a href="discover.html" title="Discover More">Discover</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <div id="container-hero">
+            <div id="hero">
+                <picture class="background-image">
+                    <source media="(min-width:1000px)" srcset="images/tarijalarge.webp" width="1024" height="682">
+                    <img src="images/tarijasmall2.webp" alt="image tarija" width="400" height="500">
+                </picture>
+                <button name="join" id="join">Join Us</button>
+            </div>
+        </div>
+        <h1>Tarija Chamber of Commerce</h1>
+        <div class="events">
+            <section>
+                <h2>Events</h2>
+
+            </section>
+            <section>
+                <h2>Current Weather</h2>
+                <div id="weather-section">
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                    <p>
+                        <span id="current-temp"></span><br>
+                        <span id="description-temp"></span><br>
+                        <span id="max-temp"></span><br>
+                        <span id="min-temp"></span><br>
+                        <span id="humidity-temp"></span><br>
+                        <span id="sunrise"></span><br>
+                        <span id="sunset"></span>
+                    </p>
+                </div>
+            </section>
+            <section>
+                <h2>Weather Forecast</h2>
+            </section>
+        </div>
+
+        <div>
+
+        </div>
+
+
+      
+    </main>
+
+    <footer>
+        <div>
+            <p><b>Tarija Chamber of Commerce</b></p>
+            <p>25 de Mayo Street, San Martin neighborhood</p>
+            <p>chambertarija@gmail.com</p> 
+            <p>(591) 72983869</p>    
+        </div>
+        <hr>
+        <div id="icons" >
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.webp" alt="youtube icon"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/x.webp" alt="X icon"></a>
+            <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin.webp" alt="linkedin icon"></a>
+        </div>
+        <hr>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Pedro R. Zelada Soruco</p>
+            <p  id="year"></p>
+            <p id="last"></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
