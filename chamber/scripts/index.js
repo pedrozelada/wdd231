@@ -94,4 +94,34 @@ function displayResults2(data) {
 }
 apiFetch2(url2);
 
+//display gold or silver members
 
+// generate random number
+const generateRandomNumber = () => Math.floor(Math.random() * 10);
+let numbers = [];
+let count = 0;
+// get three members
+const url3 = 'https://pedrozelada.github.io/wdd231/chamber/data/members.json';
+
+const getCompaniesData = async (url) => {
+  try {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+
+  while(count <= 2) {
+    let randomIndex = generateRandomNumber();
+    let memberNumber = data.companies[randomIndex];
+    console.log(memberNumber);
+    let memberNumbermembersip = memberNumber.membershiplevel;
+      if ( (memberNumbermembersip == 2 || memberNumbermembersip == 3) && !numbers.includes(randomIndex) ){
+        numbers.push(randomIndex);
+      }
+      count ++;
+    }
+    console.log("Miembros seleccionados:", numbers);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getCompaniesData(url3);
