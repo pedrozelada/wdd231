@@ -153,6 +153,7 @@ footer p {
 }
 
 h2 {
+    margin: 0;
     background-color: #0c521b;
     color: #fff;
     font-family: "Ubuntu", sans-serif;;
@@ -163,6 +164,14 @@ h2 {
 #weather-section{
     display: grid;
     grid-template-columns: 40% 60%;
+}
+
+section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border-color: #29537f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
 
 
@@ -203,12 +212,12 @@ h2 {
     }
 
     .events {
-        margin-top: 20px;
-        margin: 0 auto;
+        margin: auto;
         display: grid;
-        grid-template-columns: 50% 25% 25%;
+        grid-template-columns: 50% 25% 22%;
         gap: 20px;
         padding: 20px;
+        max-width: 1200px;
     }
     
 }
