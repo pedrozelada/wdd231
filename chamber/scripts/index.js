@@ -18,6 +18,7 @@ async function apiFetch(url) {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         displayResults(data); 
       } else {
           throw Error(await response.text());
@@ -113,7 +114,7 @@ const getCompaniesData = async (url) => {
   try {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+  
 
   while(count <= 2) {
     let randomIndex = generateRandomNumber();
@@ -126,8 +127,6 @@ const getCompaniesData = async (url) => {
       }
     }
     displayCompanies(memberstodisplay);
-    console.log("Miembros seleccionados:", numbers);
-    console.log("Miembros seleccionados:", memberstodisplay);
   } catch (error) {
     console.log(error);
   }
@@ -145,7 +144,7 @@ const displayCompanies = (companies) => {
       let level = document.createElement('p');
       
       name.innerHTML = `${companie.name}`;
-      address.innerHTML = `${companie.address}`;
+      address.innerHTML = `<b>Addres: </b>${companie.address}`;
       telf.innerHTML = `<b>Phone<b/>: ${companie.phonenumber}`;
       website.innerHTML = `<b>URL: </b><a href="${companie.websiteurl}" target="_blank" title="${companie.name}">${companie.websiteurl}</a>`;
       level.innerHTML = `<b>Membership level :</b> ${companie.membershiplevel}`
