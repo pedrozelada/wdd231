@@ -145,7 +145,7 @@ const displayCompanies = (companies) => {
       
       name.innerHTML = `${companie.name}`;
       address.innerHTML = `<b>Addres: </b>${companie.address}`;
-      telf.innerHTML = `<b>Phone<b/>: ${companie.phonenumber}`;
+      telf.innerHTML = `<b>Phone</b>: ${companie.phonenumber}`;
       website.innerHTML = `<b>URL: </b><a href="${companie.websiteurl}" target="_blank" title="${companie.name}">${companie.websiteurl}</a>`;
       level.innerHTML = `<b>Membership level :</b> ${companie.membershiplevel}`
 
