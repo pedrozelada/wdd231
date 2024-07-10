@@ -28,6 +28,8 @@ async function apiFetch(url) {
   }
 
   function displayResults(data) {
+    let iconImage = document.createElement('img');
+
     temp.innerHTML = `<b>${data.main.temp}&deg;C</b>`;
     desc.innerHTML = data.weather[0].description;
     max.innerHTML = `High: ${data.main.temp_max}&deg;`;
@@ -37,8 +39,11 @@ async function apiFetch(url) {
     suns.innerHTML = `Sunset: ${formatTimeFromUnix(data.sys.sunset)}`;
 
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    icon.setAttribute('src', iconsrc);
-    icon.setAttribute('alt', data.weather[0].main);
+    iconImage.setAttribute('src', iconsrc);
+    iconImage.setAttribute('alt', data.weather[0].main);
+    iconImage.setAttribute('width', '100');
+    iconImage.setAttribute('height', '100');
+    icon.appendChild(iconImage);
     
   }
   apiFetch(url);
