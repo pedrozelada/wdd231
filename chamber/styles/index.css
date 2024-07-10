@@ -153,7 +153,8 @@ footer p {
 }
 
 h2 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
     background-color: #0c521b;
     color: #fff;
     font-family: "Ubuntu", sans-serif;;
@@ -174,6 +175,20 @@ section {
     padding: 10px;
 }
 
+#companiesd {
+    margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 15px;
+    place-items: center;
+	align-items: center;
+    max-width: 1200px;
+}
+
+#companies-section{
+    display: grid;
+    grid-template-columns:30% 70%;
+}
 
   @media screen and (min-width: 640px) {
 

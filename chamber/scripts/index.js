@@ -95,12 +95,13 @@ function displayResults2(data) {
 apiFetch2(url2);
 
 //display gold or silver members
-
+const companiesd = document.querySelector('#companiesd');
 // generate random number
 const generateRandomNumber = () => Math.floor(Math.random() * 10);
 let numbers = [];
 let count = 0;
 // get three members
+let memberstodisplay = [];
 const url3 = 'https://pedrozelada.github.io/wdd231/chamber/data/members.json';
 
 const getCompaniesData = async (url) => {
@@ -112,16 +113,55 @@ const getCompaniesData = async (url) => {
   while(count <= 2) {
     let randomIndex = generateRandomNumber();
     let memberNumber = data.companies[randomIndex];
-    console.log(memberNumber);
     let memberNumbermembersip = memberNumber.membershiplevel;
       if ( (memberNumbermembersip == 2 || memberNumbermembersip == 3) && !numbers.includes(randomIndex) ){
         numbers.push(randomIndex);
+        memberstodisplay.push(memberNumber);
+        count ++;
       }
-      count ++;
     }
+    displayCompanies(memberstodisplay);
     console.log("Miembros seleccionados:", numbers);
+    console.log("Miembros seleccionados:", memberstodisplay);
   } catch (error) {
     console.log(error);
   }
+}
+const displayCompanies = (companies) => {
+  companies.forEach(companie => {
+      let card = document.createElement('section');
+      let name = document.createElement('h2');
+      let companiesSection = document.createElement('div');
+      let companiesInformation = document.createElement('div');
+      let portrait = document.createElement('img');
+      let telf = document.createElement('p');
+      let address = document.createElement('p');
+      let website = document.createElement('p');
+      let level = document.createElement('p');
+      
+      name.innerHTML = `${companie.name}`;
+      address.innerHTML = `${companie.address}`;
+      telf.innerHTML = `<b>Phone<b/>: ${companie.phonenumber}`;
+      website.innerHTML = `<b>URL: </b><a href="${companie.websiteurl}" target="_blank" title="${companie.name}">${companie.websiteurl}</a>`;
+      level.innerHTML = `<b>Membership level :</b> ${companie.membershiplevel}`
+
+      companiesSection.setAttribute('id', 'companies-section')
+      portrait.setAttribute('src', companie.image);
+      portrait.setAttribute('alt', companie.name);
+      portrait.setAttribute('loading', 'lazy');
+      portrait.setAttribute('width', '100');
+      portrait.setAttribute('height', '100');
+
+      name.setAttribute('class', "hidep");
+      card.appendChild(name);
+      card.appendChild(companiesSection);
+      companiesSection.appendChild(portrait);
+      companiesSection.appendChild(companiesInformation);
+      companiesInformation.appendChild(telf);
+      companiesInformation.appendChild(address);
+      companiesInformation.appendChild(website);
+      companiesInformation.appendChild(level);
+      companiesd.appendChild(card);
+  });
 }
 getCompaniesData(url3);
