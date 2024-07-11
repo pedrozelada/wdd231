@@ -5,7 +5,7 @@
         "address": "Highway to Bermejo, Km 2, Airport Zone",
         "phonenumber": "(591) 72965513",
         "websiteurl": "https://piltarija.com/",
-        "image": "https://piltarija.com/wp-content/uploads/2016/09/logopil2.png",
+        "image": "https://pedrozelada.github.io/wdd231/chamber/images/logopil.webp",
         "membershiplevel": 2,
         "information": "dairy industries"
       },
@@ -23,7 +23,7 @@
         "address": "Av. Jorge Paz Galarza, San Jorge 1 Zone ",
         "phonenumber": "(591) 4-6636366",
         "websiteurl": "https://www.kohlberg.com.bo/",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjSWH8JFm568BSvhsJl7GeMLpT7clChvg0dxkMjVJlFYRyw_X0W41YVqr2bGPZujk4k1o&usqp=CAU",
+        "image": "https://pedrozelada.github.io/wdd231/chamber/images/logokohlberg.webp",
         "membershiplevel": 3,
         "information": "Wine"
       },
@@ -59,7 +59,7 @@
         "address": "Av. Angel Baldivieso #1976",
         "phonenumber": "(591) 6642552",
         "websiteurl": "https://www.vinosaranjuez.com/",
-        "image": "https://www.vinosaranjuez.com/wp-content/uploads/2021/11/logo-1.png",
+        "image": "https://pedrozelada.github.io/wdd231/chamber/images/logoaranjuez.webp",
         "membershiplevel": 3,
         "information": "Wine"
       },
@@ -77,7 +77,7 @@
         "address": "Cochabamba Street #1026",
         "phonenumber": "(591) 71894731",
         "websiteurl": "https://www.quiminet.com/",
-        "image": "https://i.mkt.lu/dl/thumb/82883252040/80175061510.jpg",
+        "image": "https://pedrozelada.github.io/wdd231/chamber/images/logosanjuan.webp",
         "membershiplevel": 2,
         "information": "leather industries"
       },
