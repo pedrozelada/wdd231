@@ -102,9 +102,11 @@ const displayCourses = (coursesList) => {
 
         nameP.innerHTML = `${nameSubject} ${numberSubject}`;
         article.appendChild(nameP);
+        article.addEventListener('click', () => {
+            displayCourseDetails(course);
+            });
 
         coursesElement.appendChild(article);
-
 
       });
       total.innerHTML = `Credits Required: ${totalCredits}`;
@@ -130,3 +132,24 @@ const all = document.querySelector("#all");
 all.addEventListener("click", () => {
   displayCourses(courses);
 });
+
+
+// Modal
+let courseDetails = document.querySelector('#course-details');
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
