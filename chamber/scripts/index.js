@@ -18,7 +18,6 @@ async function apiFetch(url) {
       const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         displayResults(data); 
       } else {
           throw Error(await response.text());
@@ -31,10 +30,10 @@ async function apiFetch(url) {
   function displayResults(data) {
     let iconImage = document.createElement('img');
 
-    temp.innerHTML = `<b>${data.main.temp}&deg;C</b>`;
+    temp.innerHTML = `<b>${Math.round(data.main.temp)}&deg;C</b>`;
     desc.innerHTML = data.weather[0].description;
-    max.innerHTML = `High: ${data.main.temp_max}&deg;`;
-    min.innerHTML = `Low: ${data.main.temp_min}&deg;`;
+    max.innerHTML = `High: ${Math.round(data.main.temp_max)}&deg;`;
+    min.innerHTML = `Low: ${Math.round(data.main.temp_min)}&deg;`;
     hum.innerHTML = `Humidity: ${data.main.humidity}%`;
     sunr.innerHTML = `Sunrise: ${formatTimeFromUnix(data.sys.sunrise)}`;
     suns.innerHTML = `Sunset: ${formatTimeFromUnix(data.sys.sunset)}`;
@@ -83,7 +82,6 @@ async function apiFetch2(url) {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       displayResults2(data); 
     } else {
         throw Error(await response.text());
@@ -94,9 +92,9 @@ async function apiFetch2(url) {
 }
 
 function displayResults2(data) {
-  tod.innerHTML = `Today <b>${data.list[0].main.temp}&deg;C</b>`;
-  tom.innerHTML = `${daytomorrow} <b>${data.list[1].main.temp}&deg;C</b>`;
-  atom.innerHTML = `${dayaftertomorrow} <b>${data.list[2].main.temp}&deg;C</b>`;
+  tod.innerHTML = `Today: <b>${Math.round(data.list[0].main.temp)}&deg;C</b>`;
+  tom.innerHTML = `${daytomorrow}: <b>${Math.round(data.list[1].main.temp)}&deg;C</b>`;
+  atom.innerHTML = `${dayaftertomorrow}: <b>${Math.round(data.list[2].main.temp)}&deg;C</b>`;
 }
 apiFetch2(url2);
 
