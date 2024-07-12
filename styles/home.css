@@ -141,11 +141,25 @@ main {
     text-align: center;
 }
 
+@keyframes slidein {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
 .container article {
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 5%;
     padding-left: 6rem;
     padding-right: 6rem;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 
 .completed {

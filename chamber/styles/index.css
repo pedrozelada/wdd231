@@ -178,6 +178,20 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-bottom: 20px;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+@keyframes slidein {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
 }
 
 #companiesd {
