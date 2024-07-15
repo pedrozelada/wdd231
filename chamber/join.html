@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarija Chamber of Commerce</title>
+    <meta name="description" content="Chamber of commerce of the city of Tarija">
+    <meta name="author" content="Pedro Zelada">
+    <meta property="og:title" content="Tarija Chamber of Commerce">
+    <meta property="og:description" content="Chamber of Commerce of the city of Tarija, here you will find information on local businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pedrozelada.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="https://pedrozelada.github.io/chamber/images/tarija.webp">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@flickr">
+    <meta name="twitter:title" content="Tarija Chamber of Commerce">
+    <meta name="twitter:description" content="Chamber of Commerce of the city of Tarija, here you will find information on local businesses.">
+    <meta name="twitter:image" content="https://elpais.bo/img/images_980/contents/2024/01/19/2159baf2-0b3b-4c17-b22f-b40bdc366dfd.jpg">
+    <link rel="icon" href="tarijaicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="titledescription">
+            <img src="images/escudotarija2.webp" alt="logo tarija" width="70" height="82">
+            <p>
+            <span id="headtitle"><b>Tarija</b></span><br>
+            <span id="headown">Chamber of Commerce</span>
+            </p>
+        </div>
+        <button id="menu" title="menu"></button>
+        <nav id="animate">
+            <ul class="navigation">
+                <li><a href="index.html" title="Home Page" class="active">Home</a></li>
+                <li><a href="directory.html" title="Chamber proyect" >Directory</a></li>
+                <li><a href="join.html" title="Join us">Join</a></li>
+                <li><a href="discover.html" title="Discover More">Discover</a></li>
+            </ul>
+        </nav>
+        <button id="semicircle">◐</button>
+    </header>
+    <main>
+        <form method="get" action="thankyou.html" class="form1">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label for="fname">First Name*<input type="text" name="fname" id="fname" autocomplete="given-name" required></label>
+                <label for="lname">Last Name*<input type="text" name="lname" id="lname" autocomplete="family-name" required></label>
+                <label for="organizationTitle">Organizational Title<input type="text" id="organizationTitle" name="organizationTitle" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}"></label>
+                <label for="email">Email Address*<input type="email" name="email" id="email" autocomplete="email" placeholder="someone@gmail.com"  required></label>
+                <label>Mobile Phone Number<input type="tel" id="phone" name="phone" autocomplete="tel" required ></label>
+                <label for="organization">Business/Organization's Name<input type="text" id="organization" name="organization" autocomplete="organization" required></label>
+                <div>Membership Level</div>
+                <div id="mlevel">  
+                    <div class="membership-option">
+                        <label><input type="radio" name="level" value="np">NP</label><span class="learn-more" id="openButton1">Learn More</span>
+                    </div>
+                    <div class="membership-option">
+                        <label><input type="radio" name="level" value="bronze">Bronze Membership</label><span class="learn-more" id="openButton2">Learn More</span>
+                    </div>
+                    <div class="membership-option">
+                        <label><input type="radio" name="level" value="silver">Silver Membership</label><span class="learn-more" id="openButton3">Learn More</span>
+                    </div>
+                    <div class="membership-option">
+                        <label><input type="radio" name="level" value="gold">Gold Membership</label><span class="learn-more" id="openButton4">Learn More</span>
+                    </div>
+                </div>
+                <dialog id="mydialog">
+                    <h2></h2>
+                    <p></p>
+                    <button id="closeButton">❌</button>
+                </dialog>
+                <label for="review">Business/Organization's description</label>
+                <textarea id="review" name="review"></textarea>
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+
+            </fieldset>
+    
+            <input type="submit" value="Join Us">
+    
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <p><b>Tarija Chamber of Commerce</b></p>
+            <p>25 de Mayo Street, San Martin neighborhood</p>
+            <p>chambertarija@gmail.com</p> 
+            <p>(591) 72983869</p>    
+        </div>
+        <hr>
+        <div id="icons" >
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube.webp" alt="youtube icon"></a>
+            <a href="https://x.com/" target="_blank"><img src="images/x.webp" alt="X icon"></a>
+            <a href="https://linkedin.com/" target="_blank"><img src="images/linkedin.webp" alt="linkedin icon"></a>
+        </div>
+        <hr>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Pedro R. Zelada Soruco</p>
+            <p  id="year"></p>
+            <p id="last"></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
