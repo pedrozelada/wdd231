@@ -231,7 +231,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 }
 
 .learn-more:hover {
-    color: darkblue; /* Cambia el color cuando se pase el cursor */
+    color: darkblue; 
 }
 
 dialog {
@@ -255,8 +255,10 @@ h2{
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-dialog button {
+dialog span {
+    cursor: pointer;
     position: absolute;
+    background-color: #c7c5c5;
     top: 13px;
     right: 23px;
     padding: .5rem 1rem;

@@ -126,6 +126,11 @@ footer p {
     margin-top: 20px;
     text-align: center;
 }
+
+#container-hero a{
+    color: #fff;
+}
+
 #hero {
     position: relative;
     display: inline-block;
