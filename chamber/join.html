@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarija Chamber of Commerce</title>
+    <title>Tarija Chamber of Commerce, Join Us</title>
     <meta name="description" content="Chamber of commerce of the city of Tarija">
     <meta name="author" content="Pedro Zelada">
     <meta property="og:title" content="Tarija Chamber of Commerce">
@@ -34,25 +34,26 @@
         <button id="menu" title="menu"></button>
         <nav id="animate">
             <ul class="navigation">
-                <li><a href="index.html" title="Home Page" class="active">Home</a></li>
+                <li><a href="index.html" title="Home Page">Home</a></li>
                 <li><a href="directory.html" title="Chamber proyect" >Directory</a></li>
-                <li><a href="join.html" title="Join us">Join</a></li>
+                <li><a href="join.html" title="Join us" class="active">Join</a></li>
                 <li><a href="discover.html" title="Discover More">Discover</a></li>
             </ul>
         </nav>
         <button id="semicircle">◐</button>
     </header>
     <main>
+        <h1>Tarija Chamber of Commerce Join Us</h1>
         <form method="get" action="thankyou.html" class="form1">
             <fieldset>
                 <legend>Applicant Information</legend>
                 <label for="fname">First Name*<input type="text" name="fname" id="fname" autocomplete="given-name" required></label>
                 <label for="lname">Last Name*<input type="text" name="lname" id="lname" autocomplete="family-name" required></label>
-                <label for="organizationTitle">Organizational Title<input type="text" id="organizationTitle" name="organizationTitle" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}"></label>
+                <label for="organizationTitle">Organizational Title<input type="text" id="organizationTitle" name="organizationTitle" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}" title="Only accept alpha characters, hyphens, and spaces with a minimum of seven characters"></label>
                 <label for="email">Email Address*<input type="email" name="email" id="email" autocomplete="email" placeholder="someone@gmail.com"  required></label>
                 <label>Mobile Phone Number<input type="tel" id="phone" name="phone" autocomplete="tel" required ></label>
                 <label for="organization">Business/Organization's Name<input type="text" id="organization" name="organization" autocomplete="organization" required></label>
-                <div>Membership Level</div>
+                <div>Membership Level, Select one:</div>
                 <div id="mlevel">  
                     <div class="membership-option">
                         <label><input type="radio" name="level" value="np">NP</label><span class="learn-more" id="openButton1">Learn More</span>

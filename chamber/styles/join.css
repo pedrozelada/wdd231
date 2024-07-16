@@ -203,12 +203,14 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 }
 
 #mlevel{
+    margin-top: -20px;
     width: 100%;
     max-width: 400px;
 }
 
 .membership-option {
     border: solid 1px #999;
+    background-color: #fff;
     border-radius: 6px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -232,6 +234,18 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 .learn-more:hover {
     color: darkblue; 
+}
+
+.membership-option {
+    opacity: 0; 
+    transform: translateY(-20px); 
+    transition: opacity 2s ease, transform 2s ease;
+    margin: 10px 0; 
+}
+
+.membership-option.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 dialog {
@@ -304,13 +318,4 @@ dialog span {
         margin: auto;
     }
 
-    .events {
-        margin: auto;
-        display: grid;
-        grid-template-columns: 50% 25% 22%;
-        gap: 20px;
-        padding: 20px;
-        max-width: 1200px;
-    }
-    
 }

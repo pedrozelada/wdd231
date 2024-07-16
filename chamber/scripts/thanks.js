@@ -15,22 +15,37 @@ showInfo.innerHTML = `
 <p>You filled out this form on  ${formatFechaHora(fechaCodificada)}</p>
 
 `;
-
+console.log(show('timestamp'))
 
 
 function formatFechaHora(fechaCodificada) {
-    var fechaDecodificada = decodeURIComponent(fechaCodificada);
-    var fecha = new Date(fechaDecodificada);
-    var dia = fecha.getUTCDate();
-    var mes = fecha.getUTCMonth() + 1; 
-    var año = fecha.getUTCFullYear();
-    var horas = fecha.getUTCHours();
-    var minutos = fecha.getUTCMinutes();
-    mes = mes < 10 ? '0' + mes : mes;
-    dia = dia < 10 ? '0' + dia : dia;
-    var fechaFormateada = `${mes}/${dia}/${año} at ${horas}:${minutos < 10 ? '0' + minutos : minutos}`;
-    return fechaFormateada;
+    try {
+        var fechaDecodificada = decodeURIComponent(fechaCodificada);
+        var fecha = new Date(fechaDecodificada);
+        
+        if (isNaN(fecha.getTime())) {
+            throw new Error('Fecha inválida');
+        }
+
+        var dia = fecha.getDate();
+        var mes = fecha.getMonth() + 1;
+        var año = fecha.getFullYear();
+        var horas = fecha.getHours();
+        var minutos = fecha.getMinutes();
+
+        mes = mes.toString().padStart(2, '0');
+        dia = dia.toString().padStart(2, '0');
+        horas = horas.toString().padStart(2, '0');
+        minutos = minutos.toString().padStart(2, '0');
+
+        var fechaFormateada = `${mes}/${dia}/${año} at ${horas}:${minutos}`;
+        return fechaFormateada;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
 }
+
 
 
 function show(information) {
