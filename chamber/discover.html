@@ -9,7 +9,7 @@
     <meta property="og:title" content="Tarija Chamber of Commerce">
     <meta property="og:description" content="Chamber of Commerce of the city of Tarija, here you will find information on local businesses.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pedrozelada.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://pedrozelada.github.io/wdd231/chamber/discover.html">
     <meta property="og:image" content="https://pedrozelada.github.io/chamber/images/tarija.webp">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@flickr">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/discover.css">
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,76 +34,106 @@
         <button id="menu" title="menu"></button>
         <nav id="animate">
             <ul class="navigation">
-                <li><a href="index.html" title="Home Page" class="active">Home</a></li>
+                <li><a href="index.html" title="Home Page">Home</a></li>
                 <li><a href="directory.html" title="Chamber proyect" >Directory</a></li>
                 <li><a href="join.html" title="Join us">Join</a></li>
-                <li><a href="discover.html" title="Discover More">Discover</a></li>
+                <li><a href="discover.html" title="Discover More" class="active">Discover</a></li>
             </ul>
         </nav>
         <button id="semicircle">◐</button>
     </header>
     <main>
-        <section>
-            <article class="data">
-                <h2>Data</h2>
-                <div class="div-table">
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Area: </b> </div>
-                        <div class="div-table-col2"> 37 620 km2</div>
+        <p id="visit"></p>
+        <div class="main-content">
+            <section>
+                <article class="data">
+                    <h2>Data</h2>
+                    <div class="div-table">
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Area: </b> </div>
+                            <div class="div-table-col2"> 37 620 km2</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Population: </b></div>
+                            <div class="div-table-col2"> 619 000 (2024)</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Languages: </b></div>
+                            <div class="div-table-col2"> Spanish, Guarani, Weenhayek and Tapiete​</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Currency: </b></div>
+                            <div class="div-table-col2"> Boliviano (BOB)</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Time Zone:</b></div>
+                            <div class="div-table-col2"> GMT-4</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Calling Code: </b></div>
+                            <div class="div-table-col2"> +591</div>
+                        </div>
+                        <div class="div-table-row">
+                            <div class="div-table-col"><b>Foundation: </b></div>
+                            <div class="div-table-col2"> July 4, 1574</div>
+                        </div>
                     </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Population: </b></div>
-                        <div class="div-table-col2"> 619 000 (2024)</div>
-                    </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Languages: </b></div>
-                        <div class="div-table-col2"> Spanish, Guarani, Weenhayek and Tapiete​</div>
-                    </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Currency: </b></div>
-                        <div class="div-table-col2"> Boliviano (BOB)</div>
-                    </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Time Zone:</b></div>
-                        <div class="div-table-col2"> GMT-4</div>
-                    </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Calling Code: </b></div>
-                        <div class="div-table-col2"> +591</div>
-                    </div>
-                    <div class="div-table-row">
-                        <div class="div-table-col"><b>Foundation: </b></div>
-                        <div class="div-table-col2"> July 4, 1574</div>
-                    </div>
-                </div>
-            </article>
-            <article class="data">
-                <h2>Interesting facts about tarija</h2>
-            </article>
+                </article>
+                <article class="data">
+                    <h2>Interesting facts about tarija</h2>
+                    <ul>
+                        <li>Tarija has a very pleasant temperate climate, it is constantly warm.</li>
+                        <li>The people of Tarija speak Spanish with a unique accent and incorporate a regional vocabulary</li>
+                        <li>Tarija is surrounded by fertile valleys and vineyards, making it an ideal region for wine production.</li>
+                        <li>Tarija is famous for its traditional music and dance, including the lively “cueca,” a popular Bolivian dance.</li>
+                    </ul>
+                </article>
+                <article  class="data">
+                    <h2>Festivities in Tarija</h2>
+                    <ul>
+                        <li><strong>New Year:</strong> January 1st.</li>
+                        <li><strong>Carnivals:</strong> (Movable) February - March.</li>
+                        <li><strong>Civic Anniversary:</strong> April 15th.</li>
+                        <li><strong>Easter:</strong> April 16th.</li>
+                        <li><strong>Festival of the Virgin of Chaguaya:</strong> August 15th.</li>
+                        <li><strong>Feast of San Roque:</strong> First Week of September.</li>
+                        <li><strong>Lapacho Festival:</strong> October 4th, 5th, and 6th.</li>
+                        <li><strong>Christmas:</strong> December 24th and 25th.</li>
+                    </ul>
+                    <label>You can see the dates on this calendar:
+                        <input type="date" id="calendar" name="calendar">
+                    </label>
+                </article>
 
-        </section>
-        <section  class="data">
-            <h2>Image Gallery</h2>
-            <figure>
-                <img src="images/castillo azul.webp" alt="Temple Image" width="425" height="330" loading="lazy">
-                <figcaption>Blue castle</figcaption>
-            </figure>
-            <figure>
-                <img src="images/vallecondores.webp" alt="Temple Image" width="425" height="330" loading="lazy">
-                <figcaption>Valley of the Condors</figcaption>
-            </figure>
-            <figure>
-                <img src="images/casadorada.webp" alt="Temple Image" width="425" height="330" loading="lazy">
-                <figcaption>Golden House</figcaption>
-            </figure>
-            <figure>
-                <img src="images/rutavino.webp" alt="Temple Image" width="425" height="330" loading="lazy">
-                <figcaption>Wine Route</figcaption>
-            </figure>
-            
-
-        </section>
-
+            </section>
+            <section  class="data">
+                <h2>Image Gallery</h2>
+                <figure>
+                    <img src="images/castillo azul.webp" alt="blue castle" width="425" height="330" loading="lazy">
+                    <figcaption>Blue castle</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/vallecondores.webp" alt="condors valley" width="425" height="330" loading="lazy">
+                    <figcaption>Valley of the Condors</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/casadorada.webp" alt="casa dorada" width="425" height="330" loading="lazy">
+                    <figcaption>Golden House</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rutavino.webp" alt="wine route" width="425" height="330" loading="lazy">
+                    <figcaption>Wine Route</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/observatorio.webp" alt="observatorio" width="425" height="330" loading="lazy">
+                    <figcaption>Santa Ana Observatory</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lagunas.webp" alt="tajzara lake" width="425" height="330" loading="lazy">
+                    <figcaption>Tajzara Lagoons</figcaption>
+                </figure>
+            </section>
+        </div>
     </main>
 
     <footer>

@@ -132,13 +132,19 @@ footer p {
 
 .data {
     margin: 20px;
+    padding: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 85%;
     align-items: center;
     text-align: center;
 }
+
+article ul li {
+    padding: 10px 0; 
+  }
+
 
 .div-table {
     display: table;
@@ -168,24 +174,32 @@ footer p {
 
 /*discover*/
 
+p {
+    text-align: center;
+    font-size: x-large;
+}
+
 
 figure img {
-    max-width: 90%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
     height: auto;
     border-radius: 5%;
     border: 1px solid #ccc;
     box-shadow: 0 0 30px #777;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
+input[type="date"] {
+    margin: 20px;
+    padding: 10px;
+}
 
 @media only screen and (min-width: 54rem) {
 
     main {
-        max-width: 64rem;
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-gap: 60px;
+        max-width: 75rem;
     }
     header, nav, main, footer {
         margin:auto;
@@ -219,6 +233,17 @@ figure img {
 
     footer div{
         margin: auto;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-gap: 40px;
+    }
+
+    figure img:hover {
+        transform: scale(1.09);
+        box-shadow: 0 0 30px #777;
     }
 
 }
