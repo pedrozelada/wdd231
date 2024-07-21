@@ -1,0 +1,125 @@
+{
+    "topics": [
+      {
+        "name": "Basic Arithmetic",
+        "description": "The branch of mathematics dealing with basic number operations: addition, subtraction, multiplication, and division.",
+        "complexity": "Easy",
+        "requirements": "None"
+      },
+      {
+        "name": "Pre-Algebra",
+        "description": "An introductory course to algebra, focusing on fundamental concepts like variables, expressions, and simple equations.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Algebra",
+        "description": "The study of mathematical symbols and the rules for manipulating these symbols; a unifying thread of almost all of mathematics.",
+        "complexity": "Medium",
+        "requirements": "Pre-Algebra"
+      },
+      {
+        "name": "Geometry",
+        "description": "The branch of mathematics concerned with the properties and relations of points, lines, surfaces, solids, and higher-dimensional analogs.",
+        "complexity": "Medium",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Trigonometry",
+        "description": "The study of relationships between the angles and sides of triangles and the calculations based on them.",
+        "complexity": "Medium",
+        "requirements": "Algebra, Geometry"
+      },
+      {
+        "name": "Pre-Calculus",
+        "description": "A course that prepares students for calculus, covering topics such as functions, complex numbers, and trigonometry.",
+        "complexity": "Medium",
+        "requirements": "Algebra, Geometry"
+      },
+      {
+        "name": "Calculus",
+        "description": "The mathematical study of continuous change, dealing with derivatives and integrals of functions.",
+        "complexity": "High",
+        "requirements": "Pre-Calculus"
+      },
+      {
+        "name": "Statistics",
+        "description": "The practice or science of collecting and analyzing numerical data in large quantities.",
+        "complexity": "Medium",
+        "requirements": "Algebra, Probability"
+      },
+      {
+        "name": "Probability",
+        "description": "The branch of mathematics concerned with the analysis of random phenomena.",
+        "complexity": "Medium",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Linear Algebra",
+        "description": "The branch of mathematics concerning linear equations, linear functions, and their representations through matrices and vector spaces.",
+        "complexity": "High",
+        "requirements": "Algebra"
+      },
+      {
+        "name": "Differential Equations",
+        "description": "The branch of mathematics focused on functions and the derivatives of functions, and the solutions of those functions.",
+        "complexity": "High",
+        "requirements": "Calculus"
+      },
+      {
+        "name": "Discrete Mathematics",
+        "description": "The study of mathematical structures that are fundamentally discrete rather than continuous.",
+        "complexity": "Medium",
+        "requirements": "Algebra, Logic"
+      },
+      {
+        "name": "Number Theory",
+        "description": "The branch of pure mathematics concerned primarily with the study of integers and integer-valued functions.",
+        "complexity": "High",
+        "requirements": "Algebra"
+      },
+      {
+        "name": "Topology",
+        "description": "The mathematical study of the properties of space that are preserved under continuous deformations.",
+        "complexity": "Very High",
+        "requirements": "Algebra, Geometry"
+      },
+      {
+        "name": "Fractions",
+        "description": "A numerical quantity that is not a whole number, representing a part of a whole.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Decimals",
+        "description": "A number that includes a decimal point to represent a fraction of a base ten.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Percentages",
+        "description": "A way of expressing a number as a fraction of 100.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Ratios and Proportions",
+        "description": "The comparison of two quantities and their relative sizes.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Measurement",
+        "description": "The process of obtaining the size, length, or amount of something, typically using standard units.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      },
+      {
+        "name": "Basic Geometry",
+        "description": "An introduction to the properties and relations of points, lines, surfaces, and shapes.",
+        "complexity": "Easy",
+        "requirements": "Basic Arithmetic"
+      }
+    ]
+  }
+  
