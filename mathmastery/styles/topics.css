@@ -102,8 +102,92 @@ footer p {
     margin-right: 20px;
 }
 
+
 /*others*/
 
+h2{
+    text-align: center;
+}
+
+#container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 35px;
+    place-items: center;
+    text-align: center;
+}
+
+@keyframes slidein {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+#container article {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 5%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    animation-duration: 3s;
+    animation-name: slidein;
+    background-color: #b7d8e1;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center; 
+    border-bottom: 1px solid #ccc;
+    
+}
+
+#button-container button {
+    margin-top: 10px;
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10%;
+    background-color: #F39C12;
+    font-size: 16px;
+}
+
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  dialog h2 {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #F39C12;
+}
 
 
 @media only screen and (min-width: 54rem) {
@@ -141,16 +225,12 @@ footer p {
         grid-template-rows: 1fr;
         margin-right: 50px;
     }
-
-    footer div{
-        margin: auto;
-    }
-
+    
     h1{
         margin: auto;
     }
 
     /*others*/
-    
+
 }
 

@@ -103,25 +103,13 @@ footer p {
 }
 
 /*others*/
-
-#main-content {
-    margin-top: 20px;  
-    align-items: center;
-    text-align: center;
-}
-
-#main-content img {
-    border-radius: 5px;
-}
-
-h2 {
+h2{
     font-family: 'Roboto', sans-serif;
-    margin-top: 0;
-    margin-bottom: 10px;
+    background-color: #F39C12;
     border-radius: 8px;
-    background-color: #000080;
-    color: #fff;
     text-align: center;
+    font-weight: normal;
+    padding: 10px;
 }
 
 section {
@@ -132,8 +120,10 @@ section {
     padding: 10px;
     margin-bottom: 20px;
     animation-duration: 3s;
+    align-items: center;
     animation-name: slidein;
 }
+
 
   @keyframes slidein {
     from {
@@ -147,15 +137,10 @@ section {
     }
   }
 
-#data {
+  iframe, img {
     margin: auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	grid-gap: 15px;
-    place-items: center;
-	align-items: center;
-    max-width: 1200px;
-}
+  }
+  
 
 
 @media only screen and (min-width: 54rem) {
@@ -199,11 +184,9 @@ section {
     }
 
     /*others*/
-    
-    #main-content {
-        margin: 80px;
+    section{
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-gap: 20px;
-      }
+    }
+   
 }

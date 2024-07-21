@@ -1,16 +1,23 @@
-const coursesElement = document.querySelector('.container');
+const coursesElement = document.querySelector('#container');
 
-const url = 'https://pedrozelada.github.io/wdd231/chamber/data/members.json';
+const url = 'https://pedrozelada.github.io/wdd231/mathmastery/data/mathematics_topics.json';
 const cards = document.querySelector('.grid');
+let topics = [];
 
 async function getTopics(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayItems(data.topics);
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+      topics = data.topics;
+      displayItems(data.topics);
+  } catch (error) {
+      console.error('Error fetching topics:', error);
+  }
 }
 
 function displayItems (data) {
-data.forEach(topic => {
+  coursesElement.innerHTML = '';
+  data.forEach(topic => {
     const article = document.createElement('article');
     const nameP = document.createElement('p');
     nameP.innerHTML = `${topic.name}`;
@@ -21,7 +28,30 @@ data.forEach(topic => {
 
     coursesElement.appendChild(article);
 })
-}; 
+};
+
+
+const easy = document.querySelector("#easy");
+easy.addEventListener("click", () => {
+  displayItems(topics.filter(topic => topic.complexity == 'Easy' ));
+});
+
+const medium = document.querySelector("#medium");
+medium.addEventListener("click", () => {
+  displayItems(topics.filter(topic => topic.complexity == 'Medium' ));
+});
+
+const high = document.querySelector("#high");
+high.addEventListener("click", () => {
+  displayItems(topics.filter(topic => topic.complexity == 'High' ));
+});
+
+const all = document.querySelector("#all");
+all.addEventListener("click", () => {
+  displayItems(topics);
+});
+
+
 
 
 // Modal
