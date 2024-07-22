@@ -132,16 +132,10 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     font-size: 1rem;   
 }
 
-.form1 div{
-    padding-top: 1.5rem;
-    font-size: 1rem;
-}
-
 .form1 input[type="text"],
 .form1 input[type="tel"],
 .form1 input[type="email"],
-.form1 select,
-.form1 textarea
+.form1 select
  {
     background-color: #fff ;
     display: block;
@@ -154,15 +148,11 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     appearance: none;
 }
 
-.form1 input[type="radio"],
-.form1 input[type="checkbox"] {
-    margin-right: 6px;
-}
+
 
 .form1 input[type="submit"]{
     border:none;
-    background-color: green;
-    color:#fff;
+    background-color: #F39C12;
     border-radius: 6px;
     padding: 1rem;
     width: 100%;
@@ -187,11 +177,6 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     border-bottom: solid 4px green;
 }
 
-#mlevel{
-    margin-top: -20px;
-    width: 100%;
-    max-width: 400px;
-}
 
 .membership-option {
     border: solid 1px #999;
@@ -221,27 +206,6 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     color: darkblue; 
 }
 
-.membership-option {
-    opacity: 0; 
-    transform: translateY(-20px); 
-    transition: opacity 2s ease, transform 2s ease;
-    margin: 10px 0; 
-}
-
-.membership-option.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-dialog {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 0 3rem #777;
-    width: 90%;
-    max-width: 600px;
-  }
 
 h2{
     font-family: 'Roboto', sans-serif;
@@ -251,21 +215,6 @@ h2{
     font-weight: normal;
     padding: 10px;
 }
-
-::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-dialog span {
-    cursor: pointer;
-    position: absolute;
-    background-color: #c7c5c5;
-    top: 13px;
-    right: 23px;
-    padding: .5rem 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
 
 
 @media only screen and (min-width: 54rem) {
