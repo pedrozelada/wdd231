@@ -108,10 +108,30 @@ footer p {
     margin-top: 20px;  
     align-items: center;
     text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+#data {
+    margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 15px;
+    place-items: center;
+	align-items: center;
+    max-width: 1200px;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 
 #main-content img {
     border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #29537f;
+}
+
+main img:hover {
+    transform: scale(1.1);
 }
 
 h2 {
@@ -131,31 +151,18 @@ section, article {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin-bottom: 20px;
-    animation-duration: 3s;
-    animation-name: slidein;
+
 }
 
   @keyframes slidein {
     from {
-      translate: 150vw 0;
-      scale: 200% 1;
+        transform: translate(150vw, 0) scale(2, 1);
     }
   
     to {
-      translate: 0 0;
-      scale: 100% 1;
+        transform: translate(0, 0) scale(1, 1);
     }
   }
-
-#data {
-    margin: auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	grid-gap: 15px;
-    place-items: center;
-	align-items: center;
-    max-width: 1200px;
-}
 
 
 @media only screen and (min-width: 54rem) {
@@ -206,6 +213,6 @@ section, article {
         grid-template-columns: 50% 50%;
         grid-gap: 20px;
         animation-duration: 3s;
-        animation-name: slidein;
+        
       }
 }

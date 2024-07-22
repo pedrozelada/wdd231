@@ -121,6 +121,7 @@ h2{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     width: 300px;
+    animation: slidein 2s forwards;
 }
 
 label {
@@ -166,7 +167,18 @@ select, input[type="text"] {
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
+
 }
+
+@keyframes slidein {
+    from {
+      transform: translateY(-100%);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+  }
 
 
 
@@ -213,5 +225,4 @@ select, input[type="text"] {
 
     /*others*/
   
-   
 }

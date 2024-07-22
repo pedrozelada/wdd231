@@ -178,35 +178,6 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 }
 
 
-.membership-option {
-    border: solid 1px #999;
-    background-color: #fff;
-    border-radius: 6px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-#mlevel label {
-    padding-top: 0;
-}
-
-#mlevel span{
-    text-align: center;
-}
-
-.learn-more {
-    cursor: pointer;
-    color: rgb(64, 70, 55); 
-    text-decoration: underline; 
-}
-
-.learn-more:hover {
-    color: darkblue; 
-}
-
-
 h2{
     font-family: 'Roboto', sans-serif;
     background-color: #F39C12;
@@ -258,5 +229,4 @@ h2{
     }
 
     /*others*/
-   
 }

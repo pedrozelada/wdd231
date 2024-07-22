@@ -103,6 +103,10 @@ footer p {
 }
 
 /*others*/
+main div {
+    margin: auto;
+}
+
 h2{
     font-family: 'Roboto', sans-serif;
     background-color: #F39C12;
@@ -124,22 +128,32 @@ section {
     animation-name: slidein;
 }
 
+main img {
+    border: 5px solid  #F39C12;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #29537f;
+}
+
+main img:hover {
+    transform: scale(1.1);
+}
+
 
   @keyframes slidein {
     from {
-      translate: 150vw 0;
-      scale: 200% 1;
+        transform: translate(150vw, 0) scale(2, 1);
     }
   
     to {
-      translate: 0 0;
-      scale: 100% 1;
+        transform: translate(0, 0) scale(1, 1);
     }
   }
 
-  iframe, img {
+iframe, img {
     margin: auto;
-  }
+}
+
+
   
 
 
@@ -187,6 +201,7 @@ section {
     section{
         display: grid;
         grid-template-columns: 50% 50%;
+        
     }
    
 }
