@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Mastery Join</title>
+    <title>Math Mastery</title>
     <meta name="description" content="Math Mastery, website to learn mathematics">
     <meta name="author" content="Pedro Zelada">
     <meta property="og:title" content="Math Mastery">
@@ -19,9 +19,9 @@
     <link rel="icon" href="math.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/thanks.css">
+    <link rel="stylesheet" href="styles/calculator.css">
     <script src="scripts/index.js" defer></script>
-    <script src="scripts/thanks.js" defer></script>
+    <script src="scripts/calculator.js" defer></script>
 </head>
 <body>
     <header>
@@ -34,16 +34,22 @@
             <ul class="navigation">
                 <li><a href="index.html" title="Home Page" >Home</a></li>
                 <li><a href="topics.html" title="Math Topics" >Topics</a></li>
-                <li><a href="join.html" title="Join Us" class="active">Join</a></li>
+                <li><a href="join.html" title="Join Us" >Join</a></li>
                 <li><a href="resources.html" title="Resources">Resources</a></li>
-                <li><a href="calculator.html" title="Calculator">Calculator</a></li>
+                <li><a href="calculator.html" title="Calculator" class="active">Calculator</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Details of applicant information</h2>
-        <p>Thanks for joining us. We have sent you an email with information about the classes.</p>
-        <div id="results"></div>
+        <h2>Calculator, Select and operation and insert an expression</h2>
+
+        <div class="calculator">
+            <label for="topic">Select an operation: <select id="operation" name="operation" required><option value="" disabled selected>Select an operation ...</option></select></label>
+            <label for="expression">Enter expression: <input type="text" name="expression" id="expression" placeholder="Enter expression"> </label> 
+            <div id="example" class="content"></div>
+            <button id="button" title="calculate">Calculate</button>
+            <div id="result" class="content"></div>
+        </div>
     </main>
 
     <footer>
