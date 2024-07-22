@@ -61,6 +61,33 @@ button.addEventListener("click", () => {
     fetchNewtonAPI(operation.value, expression.value);
   });
   
+// local storage
+const visitsDisplay = document.querySelector("#visits");
+const prime = document.querySelector("#prime");
+
+
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+visitsDisplay.textContent = numVisits;
+
+prime.innerHTML =  isPrime(numVisits) ? `${numVisits} is a prime number.` : `${numVisits} is not a prime number.`;
+
+
+
+
+numVisits++;
+localStorage.setItem("numVisits-ls", numVisits);
+
+function isPrime(num) {
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    if (num % 2 === 0 || num % 3 === 0) return false;
+    let i = 5;
+    while (i * i <= num) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
+        i += 6;
+    }
+    return true;
+}
 
 
 
